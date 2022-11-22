@@ -5,16 +5,16 @@ import { CartButtonContainer, CounterWrapper } from './styles'
 
 interface CartButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   counter?: number
-  bgColor?: 'purple-300' | 'yellow-200'
-  fillColor?: 'base-100' | 'yellow-300'
+  bgColor?: 'brand-purple-dark' | 'brand-yellow'
+  fillColor?: 'base-background' | 'brand-yellow-dark'
 }
 
 function CartButton({
   counter = 0,
-  bgColor = 'purple-300',
-  fillColor = 'base-100',
+  bgColor = 'brand-purple-dark',
+  fillColor = 'base-background',
   ...rest
-}: CartButtonProps) {
+}: CartButtonProps): JSX.Element {
   const navigate = useNavigate()
 
   function handleOnClick() {

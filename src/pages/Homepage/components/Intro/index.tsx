@@ -50,8 +50,6 @@ export function Intro() {
         className="responsive"
         src="src/assets/coffee-img.svg"
         alt="Um copo de café com alguns grãos de café em volta"
-        width="476"
-        height="360"
       />
     </IntroContainer>
   )

@@ -1,20 +1,38 @@
 import styled from 'styled-components'
+import background from '../../../../assets/background.jpg'
 
 export const IntroContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 94px 0;
-  gap: 1rem;
 
-  @media (max-width: 640px) {
-    align-items: center;
+  padding: 5.875rem 10rem;
+
+  @media only screen and (max-width: 1007px) {
+    flex: 1;
+    padding: 0 2.75rem;
+  }
+  @media only screen and (max-width: 640px) {
+    flex: 1;
+    padding: 0 1.2rem;
+    background: none;
   }
 
+  gap: 1rem;
+  flex: 1 1 0;
+  background-image: url(${background});
+
   .responsive {
-    width: 100%;
-    max-width: 476px;
+    max-width: 100%;
     height: auto;
-    /* margin-left: 56px; */
+
+    @media only screen and (max-width: 640px) {
+      display: none;
+    }
+
+    @media only screen and (max-width: 1007px) {
+      max-width: 75%;
+      height: auto;
+    }
   }
 `
 export const IntroText = styled.div`
@@ -65,22 +83,22 @@ const IconCircleBase = styled.div`
   svg {
     width: 16px;
     height: 16px;
-    color: ${(props) => props.theme['base-100']};
+    color: ${(props) => props.theme['base-background']};
   }
 `
 
 export const ShoppingCartCircle = styled(IconCircleBase)`
-  background-color: ${(props) => props.theme['yellow-300']};
+  background-color: ${(props) => props.theme['brand-yellow-dark']};
 `
 
 export const CubeCircle = styled(IconCircleBase)`
-  background-color: ${(props) => props.theme['base-700']};
+  background-color: ${(props) => props.theme['base-text']};
 `
 
 export const TimerCircle = styled(IconCircleBase)`
-  background-color: ${(props) => props.theme['yellow-200']};
+  background-color: ${(props) => props.theme['brand-yellow']};
 `
 
 export const CoffeeCircle = styled(IconCircleBase)`
-  background-color: ${(props) => props.theme['purple-200']};
+  background-color: ${(props) => props.theme['brand-purple']};
 `

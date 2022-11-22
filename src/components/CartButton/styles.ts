@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { shade } from 'polished'
 
 interface CartButtonProps {
-  bgColor: 'purple-300' | 'yellow-200'
-  fillColor: 'base-100' | 'yellow-300'
+  bgColor: 'brand-purple-dark' | 'brand-yellow'
+  fillColor: 'base-background' | 'brand-yellow-dark'
 }
 
 export const CartButtonContainer = styled.button<CartButtonProps>`
@@ -22,9 +22,9 @@ export const CartButtonContainer = styled.button<CartButtonProps>`
     background-color: ${(props) =>
       shade(
         0.05,
-        props.bgColor === 'purple-300'
+        props.bgColor === 'brand-purple-dark'
           ? props.theme.purple
-          : props.theme['yellow-100'],
+          : props.theme['brand-yellow-light'],
       )};
   }
   &:disabled {
@@ -44,7 +44,7 @@ export const CounterWrapper = styled.div<CounterProps>`
   right: 0;
   transform: translate(50%, -50%);
   color: #fff;
-  background: ${(props) => props.theme['yellow-300']};
+  background: ${(props) => props.theme['brand-yellow-dark']};
   border-radius: 9999px;
   opacity: ${(props) => (props.hasItem ? 1 : 0)};
   display: flex;

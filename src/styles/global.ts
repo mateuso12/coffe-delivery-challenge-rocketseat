@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: typeof defaultTheme }>`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    outline-color: ${(props) => props.theme['brand-purple']}
   }
   
   p, a, button {
@@ -18,31 +18,26 @@ export const GlobalStyle = createGlobalStyle<{ theme: typeof defaultTheme }>`
   }
   
   body {
-    background: ${(props) => props.theme['base-100']};
-    
-    margin:0 10rem;
+    background: ${(props) => props.theme['base-background']};
     height: 100vh;
     
-    @media (max-width: 768px) {
-      margin: 0 2.75rem;
-    }
     ::-webkit-scrollbar {
     width: 14px;
   }
   
   ::-webkit-scrollbar-track {
-    background:  ${(props) => props.theme['base-100']};
+    background:  ${(props) => props.theme['base-background']};
   }
   
   ::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme['purple-200']};
+    background: ${(props) => props.theme['brand-purple']};
     border-radius: 10px;
     border-right: 3px transparent solid;
     background-clip: padding-box;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: ${(props) => props.theme['purple-200']};
+    background: ${(props) => props.theme['brand-purple']};
     border-radius: 10px;
     border-right: 3px transparent solid;
     background-clip: padding-box;

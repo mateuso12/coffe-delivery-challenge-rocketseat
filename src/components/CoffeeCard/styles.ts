@@ -3,24 +3,22 @@ import styled from 'styled-components'
 export const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  -webkit-flex: 1 0 auto;
-  -moz-flex: 1 0 auto;
-  flex: 1 0 auto;
-  align-self: auto;
-
-  width: 16rem;
   padding: 0 24px 20px 24px;
+  max-width: 16rem;
+
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
 
   border-radius: 6px 36px;
 
-  background-color: ${(props) => props.theme['base-200']};
+  background-color: ${(props) => props.theme['base-card']};
   img {
+    display: flex;
     position: relative;
+    bottom: 1.875rem;
 
-    bottom: 26px;
-
-    width: 120px;
+    width: 100%;
     height: 120px;
   }
 `
@@ -37,10 +35,10 @@ export const ProductTag = styled.p`
   padding: 4px 8px;
   margin: -12px 0 16px 0;
 
-  background-color: ${(props) => props.theme['yellow-100']};
+  background-color: ${(props) => props.theme['brand-yellow-light']};
   border-radius: 100px;
 
-  color: ${(props) => props.theme['yellow-300']};
+  color: ${(props) => props.theme['brand-yellow-dark']};
   font-size: 10px;
   font-weight: 700;
   line-height: 13px;
@@ -64,7 +62,7 @@ export const ProductDescription = styled.div`
   p {
     font-size: 0.875rem;
 
-    color: ${(props) => props.theme['base-600']};
+    color: ${(props) => props.theme['base-label']};
   }
 `
 
@@ -79,9 +77,9 @@ export const ButtonsContainer = styled.div`
 export const Button = styled.button`
   padding: 8px;
 
-  color: ${(props) => props.theme['base-50']};
+  color: ${(props) => props.theme['base-white']};
 
-  background: ${(props) => props.theme['purple-300']};
+  background: ${(props) => props.theme['brand-purple-dark']};
 
   border: none;
   border-radius: 6px;
@@ -89,7 +87,7 @@ export const Button = styled.button`
   transition: 0.2s;
 
   &:hover {
-    background: ${(props) => props.theme['purple-200']};
+    background: ${(props) => props.theme['brand-purple']};
   }
 `
 
@@ -109,7 +107,7 @@ export const Coin = styled.p`
   font-weight: 400;
   line-height: 18.2px;
 
-  color: ${(props) => props.theme['base-700']};
+  color: ${(props) => props.theme['base-text']};
 `
 
 export const Price = styled.p`
@@ -118,5 +116,5 @@ export const Price = styled.p`
   font-weight: 800;
   line-height: 31.2px;
 
-  color: ${(props) => props.theme['base-700']};
+  color: ${(props) => props.theme['base-text']};
 `

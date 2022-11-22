@@ -10,7 +10,7 @@ export const QuantityItemsButtonContainer = styled.div`
 
   border-radius: 6px;
 
-  background: ${(props) => props.theme['base-400']};
+  background: ${(props) => props.theme['base-button']};
 
   button {
     background: none;
@@ -22,7 +22,7 @@ export const QuantityItemsButtonContainer = styled.div`
     font-size: 22px;
     font-family: 'Baloo', sans-serif;
 
-    color: ${(props) => props.theme['purple-200']};
+    color: ${(props) => props.theme['brand-purple']};
   }
 
   p {
